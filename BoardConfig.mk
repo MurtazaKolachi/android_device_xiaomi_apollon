@@ -28,5 +28,10 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := $(DEVICE_PATH)
 
+# Touch
+SOONG_CONFIG_NAMESPACES += XIAOMI_TOUCH
+SOONG_CONFIG_XIAOMI_TOUCH := HIGH_TOUCH_POLLING_PATH
+SOONG_CONFIG_XIAOMI_TOUCH_HIGH_TOUCH_POLLING_PATH := /sys/devices/virtual/touch/touch_dev/bump_sample_rate 
+
 # Inherit from the proprietary version
 include vendor/xiaomi/apollo/BoardConfigVendor.mk
